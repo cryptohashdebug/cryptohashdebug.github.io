@@ -1,5 +1,10 @@
-.fn {
-  color: red; /* Cambia el color del texto a rojo */
+.highlight .nf {
+  color: #26a5f9; /* Cambia el color del texto a rojo */
   /* o */
-  background-color: yellow; /* Cambia el fondo a amarillo */
+  /*background-color: #ffff00; /* Cambia el fondo a amarillo */
+}
+
+p {
+  font-size: 16px;    /* Párrafo con letra 16*/
+  text-align: justify;/* Justificado */
 }

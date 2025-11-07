@@ -3,6 +3,7 @@ SITENAME = 'Entorno Digital.'
 SITEURL = ""
 
 PATH = "content"
+OUTPUT_PATH = "docs"
 
 TIMEZONE = 'America/Havana'
 
