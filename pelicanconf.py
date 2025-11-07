@@ -36,3 +36,10 @@ DEFAULT_PAGINATION = 10
 
 # Tema
 THEME = 'themes/bootstrap2-dark'
+
+# Plugins
+PLUGIN_PATHS = ["plugins", "./plugins"]
+PLUGINS = ['pelican_solicitud_plugin2']
+
+# CSS
+#CUSTOM_CSS = '/theme/css/personal.css'
