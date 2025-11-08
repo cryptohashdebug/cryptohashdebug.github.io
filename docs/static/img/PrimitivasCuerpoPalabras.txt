@@ -1,0 +1,13 @@
+          ...<--- El encabezado termina aquí, comienza el cuerpo de la palabra.
+      Código de palabra
+    +------------------+
+ +--| 0x80490A3        | ¡Puntero al código de máquina que sigue!
+ |  +------------------+
+ +->| D4 88 F8 02      | ¡Código máquina!
+    +------------------+
+    | A8 0F 98 C3      | Más código máquina...
+    +------------------+
+      ...
+    +------------------+
+    | NEXT             |
+    +------------------+

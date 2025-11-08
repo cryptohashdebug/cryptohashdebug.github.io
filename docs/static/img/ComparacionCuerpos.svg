@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="288" width="544" viewBox="0 0 544 288" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px">
+<path d="M 8,32 L 8,224" fill="none" stroke="black"/>
+<path d="M 176,32 L 176,224" fill="none" stroke="black"/>
+<path d="M 216,112 L 216,144" fill="none" stroke="black"/>
+<path d="M 248,32 L 248,224" fill="none" stroke="black"/>
+<path d="M 416,32 L 416,224" fill="none" stroke="black"/>
+<path d="M 472,96 L 472,160" fill="none" stroke="black"/>
+<path d="M 472,192 L 472,256" fill="none" stroke="black"/>
+<path d="M 536,96 L 536,160" fill="none" stroke="black"/>
+<path d="M 536,192 L 536,256" fill="none" stroke="black"/>
+<path d="M 8,32 L 176,32" fill="none" stroke="black"/>
+<path d="M 248,32 L 416,32" fill="none" stroke="black"/>
+<path d="M 8,64 L 176,64" fill="none" stroke="black"/>
+<path d="M 248,64 L 416,64" fill="none" stroke="black"/>
+<path d="M 8,96 L 176,96" fill="none" stroke="black"/>
+<path d="M 248,96 L 416,96" fill="none" stroke="black"/>
+<path d="M 472,96 L 536,96" fill="none" stroke="black"/>
+<path d="M 192,112 L 216,112" fill="none" stroke="black"/>
+<path d="M 432,112 L 456,112" fill="none" stroke="black"/>
+<path d="M 8,128 L 176,128" fill="none" stroke="black"/>
+<path d="M 248,128 L 416,128" fill="none" stroke="black"/>
+<path d="M 472,128 L 536,128" fill="none" stroke="black"/>
+<path d="M 184,144 L 216,144" fill="none" stroke="black"/>
+<path d="M 432,144 L 456,144" fill="none" stroke="black"/>
+<path d="M 8,160 L 176,160" fill="none" stroke="black"/>
+<path d="M 248,160 L 416,160" fill="none" stroke="black"/>
+<path d="M 472,160 L 536,160" fill="none" stroke="black"/>
+<path d="M 8,192 L 176,192" fill="none" stroke="black"/>
+<path d="M 248,192 L 416,192" fill="none" stroke="black"/>
+<path d="M 472,192 L 536,192" fill="none" stroke="black"/>
+<path d="M 432,208 L 456,208" fill="none" stroke="black"/>
+<path d="M 8,224 L 176,224" fill="none" stroke="black"/>
+<path d="M 248,224 L 416,224" fill="none" stroke="black"/>
+<path d="M 472,224 L 536,224" fill="none" stroke="black"/>
+<path d="M 472,256 L 536,256" fill="none" stroke="black"/>
+<polygon class="arrowhead" points="464,208 452,202.4 452,213.6" fill="black" transform="rotate(0,456,208)"/>
+<polygon class="arrowhead" points="464,112 452,106.4 452,117.6" fill="black" transform="rotate(0,456,112)"/>
+<polygon class="arrowhead" points="440,144 428,138.4 428,149.6" fill="black" transform="rotate(180,432,144)"/>
+<polygon class="arrowhead" points="192,144 180,138.4 180,149.6" fill="black" transform="rotate(180,184,144)"/>
+<g class="text">
+<text x="80" y="20">Palabra primitiva</text>
+<text x="312" y="20">Palabra usuario</text>
+<text x="92" y="52">ptrPalabraAnterior</text>
+<text x="332" y="52">ptrPalabraAnterior</text>
+<text x="80" y="84">Nombre/Banderas</text>
+<text x="320" y="84">Nombre/Banderas</text>
+<text x="84" y="116">Puntero a código</text>
+<text x="320" y="116">Puntero a DOCOL</text>
+<text x="504" y="116">DOCOL</text>
+<text x="84" y="148">&lt;Código Maquina&gt;</text>
+<text x="328" y="148">puntero a Palabra</text>
+<text x="500" y="148">NEXT</text>
+<text x="84" y="180">&lt;Código Maquina&gt;</text>
+<text x="328" y="180">puntero a Palabra</text>
+<text x="36" y="212">NEXT</text>
+<text x="316" y="212">puntero a EXIT</text>
+<text x="500" y="212">EXIT</text>
+<text x="500" y="244">NEXT</text>
+</g>
+</svg>

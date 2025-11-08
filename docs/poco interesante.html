@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Entorno Digital.</title>
+    <title>Pruebas de implementación para el Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="cryptohashdebug">
@@ -64,7 +64,7 @@
           <div class="nav-collapse">
             <ul class="nav">
                           <li class="divider-vertical"></li>
-                  <li >
+                  <li class="active">
                     <a href="/category/articulos.html">
 						<i class="icon-folder-open icon-large"></i>Artículos
 					</a>
@@ -133,9 +133,77 @@ Etiquetas:[(<Tag 'Pruebas'>, 4), (<Tag 'forth'>, 4), (<Tag 'nasmjf'>, 4), (<Tag 
 </ul>        </div><!--/.well -->
         
         <div class="span9" id="content">
-<ul>
-	<li><a href="category/articulos.html">Artículos</a></li>
-</ul>
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to Pruebas de implementación para el Blog">
+                                        Pruebas de implementación para el Blog
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2025-11-06T00:00:00-05:00">
+        <i class="icon-calendar"></i>jue 06 noviembre 2025
+</abbr>
+<span class="label">By</span>
+<a href="/author/yurizan-peres-fernandez.html"><i class="icon-user"></i>Yurizan Peres Fernandez</a>
+<span class="label">Category</span>
+<a href="/category/articulos.html"><i class="icon-folder-open"></i>Artículos</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/pruebas.html"><i class="icon-tag"></i>Pruebas</a>
+</footer><!-- /.post-info -->                </div>
+                <div class="highlight"><pre><span></span><code><span class="nt">&lt;ul</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;tagcloud&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">tag</span> <span class="k">in</span> <span class="nv">tag_cloud</span> <span class="cp">%}</span>
+<span class="w">        </span><span class="nt">&lt;li</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;tag-</span><span class="cp">{{</span> <span class="nv">tag.1</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/</span><span class="cp">{{</span> <span class="nv">tag.0.url</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cp">{{</span> <span class="nv">tag.0</span> <span class="cp">}}</span>
+<span class="w">                </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">TAG_CLOUD_BADGE</span> <span class="cp">%}</span>
+<span class="w">                    </span><span class="nt">&lt;span</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span><span class="cp">{{</span> <span class="nv">tag.2</span> <span class="cp">}}</span><span class="nt">&lt;/span&gt;</span>
+<span class="w">                </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+<span class="w">            </span><span class="nt">&lt;/a&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/li&gt;</span>
+<span class="w">    </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>
+
+<h1>Aquí quiero mostrar datos desde la API:</h1>
+<p>
+        <div id="api-response">Cargando datos...</div>
+        <script>
+        fetch("https://jsonplaceholder.typicode.com/posts", 
+        {
+            method: "POST",
+            headers: {"Content-Type": "application/json; charset=UTF-8"},
+            body: JSON.stringify({"title": "foo", "body": "bar", "userId": 1}),
+        }
+        )
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("api-response").textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById("api-response").textContent = "Error al cargar los datos";
+                console.error("Error en fetch:", error);
+            });
+        </script>
+        </p>
+<h1>Prueba de un código QR</h1>
+<p>[-[https://ejemplo.com]-]</p>
+<h1>Pruebas de Emoji</h1>
+<p>Un corazón &lt;3 
+Una carita :p
+Otra carita :-)</p>
+                </div><!-- /.entry-content -->
+        </article>
+</section>
         </div><!--/span-->       
 
       </div><!--/row-->

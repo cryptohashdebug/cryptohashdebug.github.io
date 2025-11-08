@@ -40,7 +40,34 @@ THEME = 'themes/bootstrap2-dark'
 
 # Plugins
 PLUGIN_PATHS = ["plugins", "./plugins"]
-PLUGINS = ['pelican_solicitud_plugin2']
+PLUGINS = ['pelican_solicitud_plugin2', 'tag_cloud']
+#PLUGINS = ['pelican_solicitud_plugin2',
+#           'pelican_process_graf2',
+#           'pelican_aasvg']
 
-# CSS
-#CUSTOM_CSS = '/theme/css/personal.css'
+# Extensiones de Markdown
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.wikilinks':{},
+        'markdown.extensions.admonition':{}
+        # Añada las extensión personalizadas
+        #'plugins.pelican_markdown_aasvg': {},
+    },
+    'output_format': 'html5',
+}
+
+#MARKDOWN = {
+#    'extension_configs': {
+#        'markdown.extensions.extra': {},
+#        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+#        'markdown.extensions.meta': {},
+#        'markdown.extensions.wikilinks':{},
+#        'markdown.extensions.admonition':{}
+#        # Añada las extensión personalizadas
+#        #'plugins.pelican_markdown_aasvg': {},
+#    },
+#    'output_format': 'html5',
+#}

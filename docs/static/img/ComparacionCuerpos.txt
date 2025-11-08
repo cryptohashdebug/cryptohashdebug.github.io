@@ -1,0 +1,16 @@
+  Palabra primitiva             Palabra usuario
+ +--------------------+        +--------------------+
+ | ptrPalabraAnterior |        | ptrPalabraAnterior |
+ +--------------------+        +--------------------+
+ | Nombre/Banderas    |        | Nombre/Banderas    |
+ +--------------------+        +--------------------+      +-------+
+ | Puntero a código   | ---+   | Puntero a DOCOL    | ---> | DOCOL |
+ +--------------------+    |   +--------------------+      +-------+
+ | <Código Maquina>   |<---+   | puntero a Palabra  | <--- | NEXT  |
+ +--------------------+        +--------------------+      +-------+
+ | <Código Maquina>   |        | puntero a Palabra  |   
+ +--------------------+        +--------------------+      +-------+
+ | NEXT               |        | puntero a EXIT     | ---> + EXIT  |
+ +--------------------+        +--------------------+      +-------+
+                                                           | NEXT  |
+                                                           +-------+

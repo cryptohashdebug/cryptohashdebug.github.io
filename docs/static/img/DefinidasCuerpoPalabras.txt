@@ -1,0 +1,13 @@
+          ...<--- El encabezado termina aquí, comienza el cuerpo de la palabra.
+      palabra definida
+    +-----------------+
+ <--| 0x80490A3       | Puntero especial al código del *intérprete de palabras*
+    +-----------------+
+ <--| 0x804A2F0       | Dirección del código de otras palabra de la palabra
+    +-----------------+
+ <--| 0x804A2F0       | Y otra ...
+    +-----------------+
+      ...           
+    +-----------------+
+    | EXIT            |
+    +-----------------+

@@ -1,10 +1,129 @@
-.highlight .nf {
-  color: #26a5f9; /* Cambia el color del texto a rojo */
-  /* o */
-  /*background-color: #ffff00; /* Cambia el fondo a amarillo */
+/* Mejorando la impresión*/
+@media print {
+  /* Oculta el menú en la impresión */
+  nav, #sidebar, .menu, #menu {
+    display: none !important;
+  }
 }
 
+/* Mejorando las imágenes */
+img.svgresaltado {
+  filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+img {
+  max-width: 100% ;
+  height: auto ;
+}
+
+/* Mejorando la visibilidad de los párrafos */
 p {
   font-size: 16px;    /* Párrafo con letra 16*/
   text-align: justify;/* Justificado */
+}
+
+/* Resaltado de notas*/
+.admonition.note {
+  background-color: #4A90E2; /* Fondo azul claro */
+  border-left: 4px solid #F5A623; /* Línea izquierda azul */
+  padding: 10px 15px;
+  margin: 15px 0;
+  color: #FFD54F; /* Texto azul oscuro */
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+}
+
+.admonition-title {
+  background-color: #4A90E2; /* Fondo azul claro */
+  border-bottom: 2px solid #E0E0E0;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #7ED321; /* Azul oscuro, acorde con la nota */
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+  text-transform: capitalize;
+}
+
+/*
+Paleta para Daltónicos
+   Fondo oscuro profundo: #121212 (muy bajo brillo para modo oscuro)
+   Texto principal: #E0E0E0 (gris claro)
+   Color de acento azul: #4A90E2 (azul medio, fácilmente distinguible)
+   Color de acento naranja: #F5A623 (naranja cálido, buen contraste)
+   Color de alerta amarillo: #FFD54F (amarillo suave pero visible)
+   Color de éxito verde: #7ED321 (verde lima, contraste y fácil de detectar)
+   Color neutral gris: #606060 (para elementos secundarios eliminando colores que confundan)
+*/
+
+/* Variables para tema oscuro */
+:root {
+  --background-color: #121212;
+  --text-color: #E0E0E0;
+  --accent-blue: #4A90E2;
+  --accent-orange: #F5A623;
+  --alert-yellow: #FFD54F;
+  --success-green: #7ED321;
+  --neutral-gray: #606060;
+  --color-fondo: #121212; /* fondo oscuro */
+  --color-texto: #E0E0E0; /* texto claro */
+  --color-borde: #444444; /* borde gris medio */
+  --color-fila-impar: #292929; /* fondo para filas impares */
+  --color-fila-par: #3f3f3f; /* fondo para filas pares */
+  --color-acento: #FFD700; /* amarillo dorado, buen contraste para destacar */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Tema para tablas*/
+
+/* Aplicar tema a tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid var(--color-borde);
+  padding: 0.75em 1em;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--neutral-gray);
+  color: var(--color-texto);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-fila-impar);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-fila-par);
+}
+
+/* Para resaltar fila al pasar mouse */
+tbody tr:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+/* Asegurar que el acento es un color que daltónicos pueden distinguir */
+
+
+
+/* Ejemplo para acento */
+a {
+  color: var(--accent-blue);
+}
+
+/* Ejemplo para alertas */
+.alert {
+  color: var(--alert-yellow);
+  background-color: var(--neutral-gray);
 }

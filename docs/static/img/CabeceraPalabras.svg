@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="208" width="632" viewBox="0 0 632 208" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px">
+<path d="M 32,32 L 32,192" fill="none" stroke="black"/>
+<path d="M 184,32 L 184,192" fill="none" stroke="black"/>
+<path d="M 32,32 L 184,32" fill="none" stroke="black"/>
+<path d="M 8,48 L 24,48" fill="none" stroke="black"/>
+<path d="M 32,64 L 184,64" fill="none" stroke="black"/>
+<path d="M 32,96 L 184,96" fill="none" stroke="black"/>
+<path d="M 32,128 L 184,128" fill="none" stroke="black"/>
+<path d="M 32,160 L 184,160" fill="none" stroke="black"/>
+<path d="M 32,192 L 184,192" fill="none" stroke="black"/>
+<polygon class="arrowhead" points="16,48 4,42.4 4,53.6" fill="black" transform="rotate(180,8,48)"/>
+<g class="text">
+<text x="104" y="20">Cabecera de palabra</text>
+<text x="372" y="20">(Para *todos* los tipos de palabras)</text>
+<text x="80" y="52">0x8C5FCD8</text>
+<text x="312" y="52">Puntero a la palabra anterior</text>
+<text x="48" y="84">3</text>
+<text x="408" y="84">Longitud del nombre (3 para &quot;FOO&quot;) y banderas (ninguna)</text>
+<text x="56" y="116">'F'</text>
+<text x="56" y="148">'O'</text>
+<text x="56" y="180">'O'</text>
+</g>
+</svg>
