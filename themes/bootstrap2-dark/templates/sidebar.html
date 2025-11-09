@@ -20,7 +20,7 @@
 {% endfor %}
 {% endif %}
 
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categorías</h4></li>
 {% for cat, null in categories %}
 <li>
 <a href="{{ SITEURL }}/{{ cat.url }}">
@@ -29,11 +29,10 @@
 </li>
 {% endfor %}
 
-
 {% if tag_cloud %}
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 {% for tag in tag_cloud %}
-<li class="tag-{{ tag.1 }}">
+<li class="tag-3">
     <a href="{{ SITEURL }}/{{ tag.0.url }}">
         <i class="icon-tag icon-large"></i>{{ tag.0}} {{ tag.1}}
     </a>
