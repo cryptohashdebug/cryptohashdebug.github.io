@@ -8,6 +8,7 @@ OUTPUT_PATH = "docs"
 TIMEZONE = 'America/Havana'
 
 DEFAULT_LANG = 'es'
+STATIC_PATHS = ['static']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
