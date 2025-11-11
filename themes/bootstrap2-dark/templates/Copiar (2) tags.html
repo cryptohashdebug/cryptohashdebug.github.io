@@ -1,0 +1,76 @@
+Estructura esperada de datos para renderizar:
+
+    articles: lista de diccionarios con estructura mínima
+
+        id: identificador único
+
+        title: título del artículo
+
+        tag_ids: lista de ids de etiquetas relacionadas
+
+    tags: lista de diccionarios con estructura mínima
+
+        id: identificador único
+
+        name: nombre de la etiqueta
+
+        article_count: cantidad de artículos que usan la etiqueta (para tamaño)
+
+   <h2>Mapa de Artículos y Etiquetas</h2>
+    {% set width = 900 %}
+    {% set height = 600 %}
+    <svg viewBox="0 0 {{ width }} {{ height }}">
+        {# Calcular posiciones: artículos a la izquierda, etiquetas a la derecha #}
+        {% set art_count = articles|length %}
+        {% set tag_count = tags|length %}
+
+        {% set art_spacing = height / (art_count + 1) %}
+        {% set tag_spacing = height / (tag_count + 1) %}
+
+        {# Asignar posición a artículos #}
+        {% set article_positions = {} %}
+        {% for i, art in articles|dictsort %}
+            {% set x = width * 0.3 %}
+            {% set y = (i + 1) * art_spacing %}
+            {% set _ = article_positions.update({art.id: (x, y)}) %}
+        {% endfor %}
+
+        {# Asignar posición a etiquetas #}
+        {% set tag_positions = {} %}
+        {% for i, tag in tags|dictsort %}
+            {% set x = width * 0.7 %}
+            {% set y = (i + 1) * tag_spacing %}
+            {% set _ = tag_positions.update({tag.id: (x, y)}) %}
+        {% endfor %}
+
+        {# Definir tamaño de los puntos de etiquetas según cantidad de artículos #}
+        {% set max_tag_articles = (tags|map(attribute='article_count')|max) or 1 %}
+        {% macro tag_radius(article_count) %}
+            {{ (5 + 15 * (article_count / max_tag_articles))|round(1) }}
+        {% endmacro %}
+
+        {# Dibujar líneas entre artículos y etiquetas #}
+        {% for art in articles %}
+            {% for tag_id in art.tag_ids %}
+                {% set ax, ay = article_positions[art.id] %}
+                {% set tx, ty = tag_positions[tag_id] %}
+                <line x1="{{ ax }}" y1="{{ ay }}" x2="{{ tx }}" y2="{{ ty }}" />
+            {% endfor %}
+        {% endfor %}
+
+        {# Dibujar puntos artículos #}
+        {% for art in articles %}
+            {% set x, y = article_positions[art.id] %}
+            <circle class="article" cx="{{ x }}" cy="{{ y }}" r="8" />
+            <text x="{{ x - 10 }}" y="{{ y - 12 }}" text-anchor="end" fill="#333">{{ art.title }}</text>
+        {% endfor %}
+
+        {# Dibujar puntos etiquetas con tamaño proporcional #}
+        {% for tag in tags %}
+            {% set x, y = tag_positions[tag.id] %}
+            <circle class="tag" cx="{{ x }}" cy="{{ y }}" r="{{ tag_radius(tag.article_count) }}" />
+            <text x="{{ x + 10 }}" y="{{ y + 5 }}" text-anchor="start" fill="#333">{{ tag.name }}</text>
+        {% endfor %}
+    </svg>
+
+{% endblock %}
