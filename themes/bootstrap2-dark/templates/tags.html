@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<ul>
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-{% for tag in tag_cloud %}
-<li class="tag-3">
-	<a href="{{ SITEURL }}/{{ tag.0.url }}">
-		<i class="icon-tag icon-large"></i>{{ tag.0 }}
-	</a>
-</li>
+
+{% for article in (articles_page.object_list if articles_page else articles) %}
+    <div class="article">
+    <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+        {% for tag in article.tags %}
+			<a href="{{ SITEURL }}/{{ tag.url }}"><i class="icon-tag"></i>{{ tag }}</a>
+		{% endfor %}      
+    </div>    
 {% endfor %}
-</ul>
+   
 {% endblock %}
