@@ -2,7 +2,7 @@ Title: Forth, Descendiendo a las Profundidades
 Date: 2025-11-06
 Modified: 2025-11-07
 Category: Artículos
-Tags: Aprender, forth, nasmjf
+Tags: Aprender, Forth, nasmjf
 Slug: Echa un vistazo a los engranes de Forth
 Author: Yurizan Peres Fernandez
 Summary: Un paseo por los detalles de una implementación de Forth
