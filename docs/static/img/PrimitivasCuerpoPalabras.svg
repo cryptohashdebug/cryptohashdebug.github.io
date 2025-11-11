@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="224" width="632" viewBox="0 0 632 224" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px">
+<path d="M 8,64 L 8,96" fill="none" stroke="black"/>
+<path d="M 32,48 L 32,144" fill="none" stroke="black"/>
+<path d="M 32,176 L 32,208" fill="none" stroke="black"/>
+<path d="M 184,48 L 184,144" fill="none" stroke="black"/>
+<path d="M 184,176 L 184,208" fill="none" stroke="black"/>
+<path d="M 104,16 L 128,16" fill="none" stroke="black"/>
+<path d="M 32,48 L 184,48" fill="none" stroke="black"/>
+<path d="M 8,64 L 24,64" fill="none" stroke="black"/>
+<path d="M 32,80 L 184,80" fill="none" stroke="black"/>
+<path d="M 8,96 L 24,96" fill="none" stroke="black"/>
+<path d="M 32,112 L 184,112" fill="none" stroke="black"/>
+<path d="M 32,144 L 184,144" fill="none" stroke="black"/>
+<path d="M 32,176 L 184,176" fill="none" stroke="black"/>
+<path d="M 32,208 L 184,208" fill="none" stroke="black"/>
+<polygon class="arrowhead" points="112,16 100,10.4 100,21.6" fill="black" transform="rotate(180,104,16)"/>
+<polygon class="arrowhead" points="32,96 20,90.4 20,101.6" fill="black" transform="rotate(0,24,96)"/>
+<g class="text">
+<text x="88" y="20">...</text>
+<text x="384" y="20">El encabezado termina aquí, comienza el cuerpo de la palabra.</text>
+<text x="112" y="36">Código de palabra</text>
+<text x="80" y="68">0x80490A3</text>
+<text x="356" y="68">¡Puntero al código de máquina que sigue!</text>
+<text x="88" y="100">D4 88 F8 02</text>
+<text x="260" y="100">¡Código máquina!</text>
+<text x="88" y="132">A8 0F 98 C3</text>
+<text x="280" y="132">Más código máquina...</text>
+<text x="56" y="164">...</text>
+<text x="60" y="196">NEXT</text>
+</g>
+</svg>

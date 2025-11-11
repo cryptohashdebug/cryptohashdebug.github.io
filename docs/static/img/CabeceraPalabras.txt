@@ -1,0 +1,12 @@
+    Cabecera de palabra      (Para *todos* los tipos de palabras)
+    +------------------+
+ <--| 0x8C5FCD8        | Puntero a la palabra anterior
+    +------------------+
+    | 3                |Longitud del nombre (3 para "FOO") y banderas (ninguna)
+    +------------------+
+    | 'F'              |
+    +------------------+
+    | 'O'              |
+    +------------------+
+    | 'O'              |
+    +------------------+
